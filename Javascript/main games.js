@@ -1,5 +1,5 @@
 // hide url
-window.history.replaceState('','','/');
+window.history.replaceState('','','/Asylumarena');
 
 //menu toggle
 const menu = document.querySelector('#mobile-menu')
