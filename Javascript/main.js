@@ -1,5 +1,5 @@
 // hide url
-window.history.replaceState('','','/');
+window.history.replaceState('','','/Asylumarena/');
 
 
 // pages 
