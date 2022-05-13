@@ -299,14 +299,14 @@ header nav ul li a {
     position: absolute;
   }
   .container .logo img {
-    height: 125px;
+    height: 115px;
     left: -200px;
     top: -10px;
     position: absolute;
     transition: 0.2s ease-in-out;
   }
   .container .logo img:hover {
-    height: 155px;
+    height: 125px;
     left: -205px;
   }
   header nav {
