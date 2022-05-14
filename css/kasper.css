@@ -1166,13 +1166,13 @@ grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   font-weight: normal;
 }
 .pricing .plans .plan .head span::after {
-  content: "1/Hr";
+  content: "1-Hr";
   font-size: 20px;
   position: relative;
   right: -15px;
 }
 .pricing .plans .plan .head.pro span::after {
-  content: "5Hr";
+  content: "5-Hr";
 }
 .pricing .plans .plan ul {
   border-bottom: 1px solid var(--background-color);
