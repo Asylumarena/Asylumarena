@@ -1,5 +1,5 @@
 // hide url
-// window.history.replaceState('','','/Asylumarena/');
+ window.history.replaceState('','','/Asylumarena/');
 
 
 // pages 
