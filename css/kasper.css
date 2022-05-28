@@ -278,6 +278,7 @@ ul {
 
 
 /* Start Header */
+
 header {
   position: absolute;
   left: 0%;
@@ -301,6 +302,7 @@ header .container:after {
   left: 15px;
   position: absolute;
 }
+
 
 .container .logo img {
   height: 125px;
@@ -490,6 +492,41 @@ header nav .form i {
 .landing .text .content {
   max-width: 500px;
 }
+.landing .text .content .location {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-left: 70%;
+  font-size: 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #111;
+  
+  transition: 0.3s;
+}
+
+.landing .text .content .location button {
+  color: white;
+  border: none;
+
+  font-size: 16px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #111;
+  
+}
+.landing .text .content .location:hover{
+  padding-left: 25px; 
+}
+
+
+/* .landing .text .content button:hover{
+  background-color: var(--main-color);
+} */
 
 .landing .text .content h2 {
   font-family: "Poppins", sans-serif;
@@ -561,6 +598,14 @@ header nav .form i {
 .landing .bullets li.active {
   background-color: var(--main-color);
   transition: 0.7s ease-in-out;
+}
+@media (max-width: 1210px) {
+  .landing .text .content .location  {
+    margin-left:50%;
+    padding: 10px 25px;
+    
+  }
+
 }
 @media (max-width: 767px) {
   .landing .text {
@@ -1050,9 +1095,9 @@ header nav .form i {
 .pricing .plans {
   
   display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 2fr)); */
+   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr)); 
   
-  grid-template-columns: 300px 300px;
+  /* grid-template-columns: 300px 300px;  for 2 plans */  
 
   justify-content: center;
   
@@ -1080,6 +1125,16 @@ grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   overflow: hidden;
   
 }
+.pricing .plans .plan.premium {
+  background-color: #fcfcfc;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffee8c;
+  transition: 0.5s ease-in-out;
+  border-radius: 12px;
+  overflow: hidden;
+  
+}
 
 .pricing .plans .plan:hover {
   position: relative;
@@ -1094,8 +1149,8 @@ grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   position: absolute;
   top: 300px;
   left: 50%;
-  width:400px;
-  height: 400px;
+  width:500px;
+  height: 500px;
   background-color: rgb(255, 255, 255);
   transform: translateX(-50%);
   border-radius: 40%;
@@ -1108,9 +1163,38 @@ grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   position: absolute;
   top: -100px;
   left: 50%;
-  width:400px;
-  height: 400px;
+  width:500px;
+  height: 500px;
   background-color: rgb(255, 255, 255);
+  transform: translateX(-50%);
+  border-radius: 40%;
+  animation:fill 2s ease-in-out alternate;
+  z-index: -1;
+  
+  
+}
+.pricing .plans .plan.premium::before{
+  content: "";
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  width:500px;
+  height: 500px;
+  background-color: #ffe342;
+  transform: translateX(-50%);
+  border-radius: 40%;
+  animation-name: reverse;
+  animation-duration: 1s;
+  z-index: -1;
+}
+.pricing .plans .plan.premium:hover::before{
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  width:500px;
+  height: 500px;
+  background-color: #ffe342;
   transform: translateX(-50%);
   border-radius: 40%;
   animation:fill 2s ease-in-out alternate;
@@ -1149,8 +1233,8 @@ grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   border-bottom: 1px solid var(--main-color);
 }
 .pricing .plans .plan .head h3 {
-  font-weight: normal;
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
   text-transform: uppercase;
 }
 .pricing .plans .plan .head span {
@@ -1171,7 +1255,11 @@ grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   position: relative;
   right: -15px;
 }
+
 .pricing .plans .plan .head.pro span::after {
+  content: "3/Hr";
+}
+.pricing .plans .plan .head.premium span::after {
   content: "5/Hr";
 }
 .pricing .plans .plan ul {

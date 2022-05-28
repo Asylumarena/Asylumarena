@@ -1,5 +1,5 @@
 // hide url
-window.history.replaceState('','','/Asylumarena/');
+// window.history.replaceState('','','/Asylumarena/');
 
 
 // pages 
@@ -170,8 +170,14 @@ if (currentFilter == 3) {
 // contactus facebook link 
 
 let facebookLink = document.querySelectorAll('#facebook')
+let googlemap = document.querySelectorAll('#location')
 
-
+//contactus facebook
+googlemap.forEach(e => e.addEventListener('click',() =>{
+        window.open('https://www.google.com/maps/place/Asylum+Arena/@36.7203596,3.1836063,21z/data=!4m5!3m4!1s0x128e51eccce53cf1:0x25a8d56bf77c3979!8m2!3d36.7203419!4d3.1835865?hl=en-US', '_blank')
+    })
+)
+//contactus googlemap
 facebookLink.forEach(e => e.addEventListener('click',() =>{
         window.open('https://www.facebook.com/Asylum-Arena-106713905301745', '_blank')
     })
